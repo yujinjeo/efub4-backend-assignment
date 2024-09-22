@@ -3,7 +3,7 @@ name: CD/CI with Docker
 
 on:
   push:
-    branches: ["member/yujinjeo"]
+    branches: ["member/yujinjeo", "main"]
 
 jobs:
   deploy:
