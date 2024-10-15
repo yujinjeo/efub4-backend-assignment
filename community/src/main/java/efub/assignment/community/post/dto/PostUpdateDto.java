@@ -3,7 +3,7 @@ package efub.assignment.community.post.dto;
 import jakarta.validation.constraints.NotBlank;
 import lombok.*;
 
-@Getter
+@Getter @Builder
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class PostUpdateDto {
 
