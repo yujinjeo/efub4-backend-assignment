@@ -39,7 +39,7 @@ public class AccountController {
         return AccountResponseDto.from(findAccount);
     }
 
-    @PatchMapping("/{account_id}")
+    @DeleteMapping("/{account_id}")
     @ResponseStatus(value = HttpStatus.OK)
     public String withdraw(@PathVariable Long account_id){
         accountService.withdraw(account_id);

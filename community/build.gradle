@@ -31,7 +31,6 @@ dependencies {
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
 	// jwt 관련 import
 	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
 	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
@@ -39,8 +38,7 @@ dependencies {
 
 	// redis - for logout
 	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
-
-
+	testRuntimeOnly 'com.h2database:h2'
 }
 
 tasks.named('test') {
