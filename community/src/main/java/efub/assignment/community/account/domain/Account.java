@@ -43,6 +43,8 @@ public class Account extends BaseTimeEntity {
     @Enumerated(EnumType.STRING)
     private AccountStatus status;
 
+    private String refreshToken;
+
     /* mappedBy : 연관관계의 주인 */
     /* cascade : 엔티티 삭제 시 연관된 엔티티의 처리 방식 */
     /* orphanRemoval : 고아 객체의 처리 방식 */
@@ -63,6 +65,10 @@ public class Account extends BaseTimeEntity {
         this.email = email;
         this.nickname = nickname;
         this.password = password;
+    }
+
+    public void updateRefreshToken(String refreshToken){
+        this.refreshToken=refreshToken;
     }
 
     public void withdrawAccount(){

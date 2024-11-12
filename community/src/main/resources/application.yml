@@ -16,9 +16,40 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://localhost:3306/community?createDatabaseIfNotExist=true&characterEncoding=UTF-8&characterSetResults=UTF-8
     username: root
-    password: MySQL1234
+    password: alipll*57armce&
   jpa:
     hibernate:
       ddl-auto: update
     generate-ddl: true
     show-sql: true
+  redis:
+    host: localhost
+    port: 6379
+  security:
+    oauth2:
+      client:
+        provider:
+          kakao:
+            authorization-uri: https://kauth.kakao.com/oauth/authorize
+            token-uri: https://kauth.kakao.com/oauth/token
+            user-info-uri: https://kapi.kakao.com/v2/user/me
+            user-name-attribute: id
+        registration:
+          kakao:
+            client-id: fa0c8212ad68b9e1c0180b4e5ec100a9
+            client-secret: lnIBL19IW5hq01La2ZdUDdNTG7BCaYNv
+            client-authentication-method: client_secret_post
+            redirect-uri: http://localhost:8080/login/oauth2/code/kakao
+            authorization-grant-type: authorization_code
+            client-name: kakao
+            prompt: login
+            scope:
+              - profile_nickname
+              - profile_image
+  jwt:
+    header: Authorization
+    secret: 29sdkfj00sdfhjhkjasdf273yrjsdhfjsb9928yjshjbhcuuuse77332179575eae0f063477894b6baa8db4f3dba7429a5babbe7908e1033f77df07f4aa9345e9088ed4a3d0dbf7b8c61c2575bb494bfbf942bbd5d1b0
+    refresh-secret: 2179575eae0f06347d31e426f41f47894b6baa8db4f3dba7429a5babbe7908e1033f77df07f4aa9345e9088ed4a3d0dbf7b8c61c2575bb494bfbf942bbd5d1b0
+
+
+

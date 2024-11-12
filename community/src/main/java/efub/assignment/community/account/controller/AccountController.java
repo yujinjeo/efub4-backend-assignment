@@ -26,7 +26,7 @@ public class AccountController {
 
     @GetMapping("/{account_id}")
     @ResponseStatus(value = HttpStatus.OK)
-    public AccountResponseDto getAccount(@PathVariable Long account_id){
+    public AccountResponseDto getAccount(@PathVariable(name = "account_id") Long account_id){
         Account findAccount = accountService.findAccountById(account_id);
         return AccountResponseDto.from(findAccount);
     }
